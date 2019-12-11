@@ -1,0 +1,10 @@
+{% extends 'manager/base.html' %}
+
+{% block content %}
+    {% for application in applications %}
+        <p>
+            {{application.author}} {{application.description}} 
+            <a href="{{MEDIA_URL}}{{application.docs.url}}">Document</a>
+        </p>
+    {% endfor %}
+{% endblock %}
